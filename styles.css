@@ -1,0 +1,288 @@
+@import url('https://static.tacdn.com/css2/webfonts/TripSans/TripSans-VF.woff2?v1.002');
+/* استيراد خط TripSans من رابط خارجي لاستعماله في التصميم */
+:root {
+  --ta-bg: #f9f8f4;       /* لون الخلفية الرئيسي */
+  --ta-dark: #383732;     /* لون النصوص الداكنة */
+  --ta-accent: #4ab6ba;   /* لون مميز يُستخدم في الأزرار أو الروابط */
+  --ta-gold: #c89357;     /* لون ذهبي إضافي */
+  --ta-light: #fff;       /* اللون الأبيض */
+  --ta-gray: #cad1d2;     /* رمادي فاتح */
+}
+html, body {
+  margin: 0; /* حذف الهوامش الخارجية */
+  padding: 0; /* حذف المسافات الداخلية */
+  background: var(--ta-bg); /* خلفية الصفحة بلون متغيّر */
+  font-family: 'TripSans', Arial, sans-serif; /* استعمال خط TripSans وإذا ما توفرش، يكون Arial */
+  color: var(--ta-dark); /* لون النص */
+}
+.ta-header {
+  background: var(--ta-light); /* خلفية بيضاء للهيدر */
+  box-shadow: 0 2px 8px rgba(0,0,0,.06); /* ظل خفيف تحت الهيدر */
+  padding: 0 32px; /* مسافة أفقية داخل الهيدر */
+}
+.ta-navbar {
+  max-width: 1200px; /* عرض أقصى للنافبار */
+  margin: 0 auto; /* توسيط النافبار */
+  display: flex; /* ترتيب العناصر في صف */
+  align-items: center; /* محاذاة عمودية للعنصر داخل النافبار */
+  height: 72px; /* طول النافبار */
+  justify-content: space-between; /* توزيع العناصر يمين ويسار */
+}
+.nav-logo img {
+  height: 40px; /* ارتفاع اللوجو */
+}
+.nav-menu {
+  display: flex; /* ترتيب عناصر المينيو في صف */
+  list-style: none; /* حذف النقاط من القائمة */
+  padding: 0;
+  margin: 0;
+  gap: 32px; /* فراغ بين كل عنصر */
+  font-weight: 500; /* سمك الخط */
+}
+.nav-menu li {
+  cursor: pointer; /* المؤشر يتبدل لليد */
+  transition: color .2s; /* تحوّل سلس للون */
+}
+.nav-menu li:hover {
+  color: var(--ta-accent); /* وقت تحوم الفأرة يتبدل اللون */
+}
+.nav-actions {
+  min-width: 100px; /* عرض أدنى لأزرار الإجراءات */
+}
+.sign-in-btn {
+  padding: 8px 20px; /* مسافة داخلية */
+  border: 1px solid var(--ta-accent); /* إطار بلون مميز */
+  border-radius: 20px; /* زوايا دائرية */
+  background: var(--ta-light); /* خلفية بيضاء */
+  color: var(--ta-accent); /* لون النص مميز */
+  font-weight: bold; /* خط عريض */
+  cursor: pointer; /* الفأرة تتحول ليد */
+  font-size: 16px;
+  transition: background .2s, color .2s; /* تأثير عند المرور */
+}
+.sign-in-btn:hover {
+  background: var(--ta-accent); /* وقت تحوم الفأرة الخلفية تتغير */
+  color: var(--ta-light); /* والنص يولي أبيض */
+}
+.ta-hero {
+  margin: 32px auto; /* هامش خارجي من فوق وأسفل وتوسيط أفقي */
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.hero-content {
+  flex: 1; /* تاخذ مساحة متساوية */
+}
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  font-weight: 700; /* خط ثقيل */
+}
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 18px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f8f4;
+  color: #383732;
+}
+.tour-guide-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  text-align: center; /* النص في الوسط */
+}
+h1 {
+  font-size: 2.5rem;
+  color: #4ab6ba;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.6; /* تباعد بين السطور */
+  color: #383732;
+}
+.hero-images {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+}
+.hero-images img {
+  width: 160px;
+  height: 180px;
+  object-fit: cover; /* باش الصورة تملى الإطار */
+  border-radius: 24px;
+  box-shadow: 0 4px 18px rgba(60,60,66,.09);
+}
+@media (max-width: 900px) {
+  .ta-hero {
+    flex-direction: column; /* العناصر تتصفف عمودي */
+    gap: 24px;
+  }
+  .hero-images {
+    justify-content: flex-start;
+  }
+}
+.ta-featured {
+  max-width: 1200px;
+  margin: 64px auto 0 auto;
+}
+.ta-featured h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+.destinations-grid {
+  display: grid; /* ترتيب العناصر في شبكة */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* أعمدة تتغير حسب العرض */
+  gap: 28px;
+}
+.destination-card {
+  background: var(--ta-light);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(44,55,66,0.09);
+  padding: 18px 12px 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer;
+}
+.destination-card:hover {
+  transform: translateY(-7px) scale(1.025); /* تتحرك الفوق و تكبر شوية */
+  box-shadow: 0 10px 30px rgba(44,55,66,0.14); /* ظل أقوى */
+}
+.destination-card img {
+  width: 100%;
+  height: 120px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+.destination-card span {
+  font-size: 1.12rem;
+  margin-top: 5px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+/* ترويسة الموقع */
+header {
+  background-color: #e60012;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* أقسام الموقع */
+section {
+  padding: 40px;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.place {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.place img {
+  width: 200px;
+  height: 150px;
+  margin-right: 20px;
+}
+
+/* زر Call to Action */
+.cta-button {
+  display: block;
+  width: 200px;
+  text-align: center;
+  background-color: #008CBA;
+  color: white;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* التذييل (Footer) */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #e60012;
+  color: white;
+}
+
+/* تحسينات للهواتف والأجهزة الصغيرة */
+@media (max-width: 768px) {
+  /* عرض الترويسة بشكل مرتب */
+  header h1 {
+      font-size: 24px;
+  }
+
+  nav a {
+      display: inline-block;
+      margin: 10px 0;
+      font-size: 16px;
+  }
+
+  /* تقسيم الأماكن السياحية بطريقة عمودية */
+  .place {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .place img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* جعل الزر CTA يتكيف مع العرض */
+  .cta-button {
+      width: 80%;
+      margin: 20px auto;
+  }
+
+  /* تغيير حجم الخط في التذييل */
+  footer p {
+      font-size: 14px;
+  }
+}
+
+/* تحسينات للشاشات الصغيرة جدًا (أقل من 480px) */
+@media (max-width: 480px) {
+  header h1 {
+      font-size: 20px;
+  }
+
+  .cta-button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+  }
+}
